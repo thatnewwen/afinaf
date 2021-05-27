@@ -47,6 +47,15 @@ to this section's matching END comment to see page-specific styles.
     format("opentype");
 }
 
+.phrase{
+      font-size: 12px;
+    color: #21b573;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
 /* Our remix on glitch button */
 .btn--remix {
   font-family: HK Grotesk;
@@ -158,6 +167,7 @@ body {
   text-transform: uppercase;
   background: none;
   border: none;
+  text-decoration: underline;
   width: auto;
 }
 
