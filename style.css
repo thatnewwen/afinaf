@@ -20,8 +20,8 @@ to this section's matching END comment to see page-specific styles.
   --color-text-main: #000000;
   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
-  --image-max-width: 300px;
-  --image-margin: 3rem;
+  --image-max-width: 200px;
+  --image-margin: 4rem;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
 }
@@ -176,11 +176,11 @@ h2 {
   color: #2800FF;
 }
 
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
+.bio{
+  color: #22b473;
+  max-width: 500px;
+  text-align: justify;
 }
-
 /* Button rotate
 - Toggling this class on and off will rotate it forward and back
 - The button transition property above determines the speed of rotation (500ms)
