@@ -16,14 +16,14 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our default values set as CSS variables */
 :root {
-  --color-bg: whitesmoke;
+  --color-bg: #eeeeee;
   --color-text-main: #000000;
   --color-primary: #FFFF00;
   --wrapper-height: 87vh;
-  --image-max-width: 200px;
-  --image-margin: 4rem;
-  --font-family: "HK Grotesk";
-  --font-family-header: "HK Grotesk";
+  --image-max-width: 100px;
+  --image-margin: 1rem;
+  --font-family: "Inter";
+  --font-family-header: "Inter";
 }
 
 /* Basic page style resets */
@@ -34,17 +34,74 @@ to this section's matching END comment to see page-specific styles.
   display: none !important;
 }
 
-/* Import fonts */
-@font-face {
-  font-family: HK Grotesk;
-  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
-    format("opentype");
-}
-@font-face {
-  font-family: HK Grotesk;
+#main-table{
   font-weight: bold;
-  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
-    format("opentype");
+  border-spacing: 0;
+  width: 100%;
+}
+
+#main-table .row{
+  border-bottom: 1px solid #22b473;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#main-table .header{
+  border-bottom: 1px solid #22b473;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#main-table .info {
+  font-weight: 400;
+  max-width: 650px;
+  padding-left: 75px;
+  font-size: 14px;
+  text-align: justify;
+  display: none;
+}
+
+#main-table .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.id {
+  width: 75px;
+}
+
+.type, .external {
+  flex: 1;
+}
+
+.name {
+  flex: 3;
+}
+
+.top .type {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+  align-content: center;
+}
+
+#main-table .external a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+#main-table a:hover {
+  text-decoration: underline;
 }
 
 .phrase{
@@ -58,7 +115,7 @@ to this section's matching END comment to see page-specific styles.
 
 /* Our remix on glitch button */
 .btn--remix {
-  font-family: HK Grotesk;
+  font-family: Inter;
   padding: 0.75rem 1rem;
   font-size: 1.1rem;
   line-height: 1rem;
@@ -95,7 +152,7 @@ to this section's matching END comment to see page-specific styles.
 
 .footer a:not(.btn--remix):link,
 a:not(.btn--remix):visited {
-  font-family: HK Grotesk;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 1.1rem;
@@ -120,28 +177,32 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
+  font-family: Inter;
   background-color: var(--color-bg);
+}
+
+a {
+  color:#22b473 !important;
 }
 
 /* Page structure */
 .wrapper {
   min-height: var(--wrapper-height);
-  display: grid;
-  place-items: center;
+  display: flex;
   margin: 0 1rem;
 }
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 /* Very light scaling for our illustration */
 .title {
   color: #2800FF;
-  font-family: HK Grotesk;
+  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 100px;
@@ -176,10 +237,8 @@ h2 {
   color: #2800FF;
 }
 
-.bio{
+body{
   color: #22b473;
-  max-width: 500px;
-  text-align: justify;
 }
 /* Button rotate
 - Toggling this class on and off will rotate it forward and back
@@ -187,4 +246,86 @@ h2 {
 */
 .rotated {
   transform: rotate(360deg);
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+th{
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.essay{
+  max-width: 800px;
+  text-align: justify;
+  font-size: 16px;
+}
+
+#detail table {
+  border-bottom: 2px solid;
+  padding: 10px 0;
+  position: sticky;
+  top: 0px;
+  background: #edeeed;
+}
+
+.details-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h2{
+  font-size: 10px;
+  text-transform: uppercase;
+  color:#21b573;
+}
+
+.summary{
+  text-transform: uppercase;
+  font-size: 12px;
+  max-width: 200px;
+  text-align: justify;
+  margin: 1em;
+}
+
+.backtohome {
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.backtohome img{
+  width: 40px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 600px) {
+  .id {
+    width: 50px;
+  }
+
+  .type {
+    display: none;
+  }
+
+  .top .id, .top .name, .top .external {
+    font-size: 11px;
+  }
+
+  #main-table .info {
+    padding-left: 0px;
+    font-size: 12px;
+  }
+
+  #main-table .row{
+    padding: 20px 0;
+  }
+
+  .external {
+    text-align: right;
+  }
 }
