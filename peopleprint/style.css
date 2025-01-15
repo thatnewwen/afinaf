@@ -3,6 +3,7 @@ body {
   background-size: 20px 20px;
   background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px);
   margin: 0;
+  color: black;
 
 }
 
@@ -36,12 +37,13 @@ body {
 }
 
 .page {
-  width: 650px;
+  width: 550px;
+  max-width: 600px;
     height: 90%;
     overflow: scroll;
     font-size: 14px;
     color: black;
-    padding: 50px;
+    padding: 30px;
     margin-right: 50px;
     text-align: justify;
     display: flex;
@@ -104,6 +106,57 @@ h2 {
   font-size: 32px;
   font-family: 'resistanceregular';
   text-align: center;
+  margin-top: 0px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'resistanceregular';
+}
+
+.menu {
+  display: flex;
+  width: 220px;
+}
+
+.menu-item{ 
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.menu a:nth-of-type(1) .menu-item{
+background-color: #cba6f0;
+}
+
+.menu a:nth-of-type(2) .menu-item{
+background-color: #fdda5b;
+}
+
+.menu a:nth-of-type(3) .menu-item{
+  background-color: #c9e4dc;
+  }
+  
+  .menu a:nth-of-type(4) .menu-item{
+  background-color: #F37748;
+  }
+
+  .menu a:nth-of-type(5) .menu-item{
+    background-color: #62C370;
+    }
+    
+    .menu a:nth-of-type(6) .menu-item{
+    background-color: #B0D0D3;
+    }
+
+.bottom .tagline {
+  text-transform: uppercase;
+  width: 220px;
+  text-align: center;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 768px) 
@@ -116,11 +169,60 @@ h2 {
   .page {
     width: 100%;
     height: 80%;
-    margin: 20px;
+    padding: 15px;
     font-size: 12px;
   }
 
   .page h2 {
     font-size: 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 15px;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+}
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  p a, p a:visited { color: #444 !important; text-decoration: underline; }
+  p a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+  .hide-on-print { display: none !important; }
+  .print-only { display: block !important; }
+
+  .wrapper {
+    height: auto;
+  }
+
+  .content {
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .page {
+    height: 141.421vw;
+    width: 100vw;
+    border: 0px solid;
+    margin: 0px;
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .bottom {
+    display: none;
   }
 }
