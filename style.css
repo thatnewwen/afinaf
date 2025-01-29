@@ -289,13 +289,33 @@ h2{
   font-size: 12px;
   max-width: 200px;
   text-align: justify;
-  margin: 1em;
+  margin-top: 1em;
+  margin-left: 1em;
+}
+
+.summary .info {
+  text-align: justify;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.profile .summary {
+  max-width: inherit;
+  width: 50%;
+}
+
+.profile .essay {
+  width: 40%;
 }
 
 .backtohome {
   top: 0;
   right: 0;
   z-index: 100;
+}
+
+.image {
+  width: 100%;
 }
 
 .backtohome img{
@@ -327,5 +347,14 @@ h2{
 
   .external {
     text-align: right;
+  }
+
+  .profile .details-section {
+    flex-direction: column-reverse;
+  }
+
+  .profile .summary, .profile .essay {
+    width: 100%;
+    margin-left: 0em;
   }
 }
