@@ -189,7 +189,7 @@ a {
 .wrapper {
   min-height: var(--wrapper-height);
   display: flex;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 .content {
   display: flex;
@@ -316,6 +316,7 @@ h2{
 
 .image {
   width: 100%;
+  border-top: 5px solid;
 }
 
 .backtohome img{
