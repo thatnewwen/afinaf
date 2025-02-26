@@ -1,0 +1,111 @@
+#a,#b {
+    position:fixed;
+}
+#a{
+    top:0;
+    left:0;
+}
+#b {
+    bottom:200px;
+    right:200px;
+    width:300px;
+    height:300px;
+}
+body {
+ height:2000px;   
+ background: #64050e;
+  color: #fff;
+  font-family: 'Albert Sans';
+}
+
+#logo {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+}
+
+#scroll {
+    position: absolute;
+    bottom: 50px;
+    left: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.number {
+    background: white;
+  padding: 5px 10px;
+  color: #64050e;
+  display: inline-block;
+  font-size: 8px;
+  margin-bottom: 5px;
+}
+
+a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+.one .preview {
+    width: 150px;
+    padding-right: 200px;
+}
+    
+.one .description {
+    padding-left: 150px;
+    width: 150px;
+}
+
+.two{
+    padding-left: 400px;
+}
+
+.description h2 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.description p {
+    margin: 0;
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+
+.two .preview {
+    width: 100px;
+}
+    
+.two .description {
+    padding-left: 100px;
+    width: 150px;
+}
+
+.three .preview {
+    width: 300px;
+    padding-right: 200px;
+}
+
+.three {
+    padding-left: 800px;
+}
+    
+.three .description {
+    padding-left: 300px;
+    width: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    #b {
+        bottom: 200px;
+        right: 0px;
+    }
+}
