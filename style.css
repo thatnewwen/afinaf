@@ -299,6 +299,11 @@ h2{
   width: 100%;
 }
 
+.summary .poem {
+  font-size: 20px;
+  text-transform: none;
+}
+
 .profile .summary {
   max-width: inherit;
   width: 50%;
