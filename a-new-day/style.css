@@ -1,0 +1,59 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 11px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 3rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    color: #6c422e;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.info{
+  padding: 0px;
+  font-size: 9px;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.gradient {
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 200px;
+  height: 20px;
+  background: #901D1D;
+background: linear-gradient(90deg,rgba(144, 29, 29, 1) 0%, rgba(104, 144, 29, 1) 33%, rgba(29, 54, 144, 1) 66%, rgba(144, 29, 29, 1) 100%);
+}
+
+@media print {
+  .site {
+    display: none;
+  }
+  
+  .printer {
+    display: block;
+  }
+}
