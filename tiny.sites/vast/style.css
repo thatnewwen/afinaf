@@ -1,0 +1,48 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+  color: orangered;
+  margin: 0;
+}
+
+.tagline{
+  color: orangered;
+  position: absolute;
+  font-size: 12px;
+  max-width: 70%;
+  bottom: 30px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.top-left{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.top-right{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.bottom-left{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.bottom-right{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
