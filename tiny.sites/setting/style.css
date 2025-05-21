@@ -1,0 +1,52 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: #3600dd;
+    margin: 0;
+    width: 50vw;
+    font-size: 200px;
+    text-align: center;
+    display: inline-block;
+}
+
+.container{
+  display: inline-flex;
+  height: 100vh;
+  align-items: center;
+  justify-text: center;
+}
+
+span{
+  color: #3600dd;
+  font-size: 12px;
+  width: 150px;
+}
+
+.top-left{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.top-right{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.bottom-left{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.bottom-right{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
