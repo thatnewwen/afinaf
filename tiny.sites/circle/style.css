@@ -1,0 +1,98 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: #ead5b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  cursor: none; 
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+#circle {
+  background: #471203;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  cursor: crosshair; 
+}
+
+h1 {
+  margin: 0em;
+  margin-bottom: -10px;
+  margin-left: -2px;
+}
+
+#description {
+      position: absolute;
+    right: 70px;
+    bottom: 70px;
+  color: #471203;
+}
+
+span {
+  font-size: 12px;
+}
+
+.line {
+  border: 3px solid;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.line:first-of-type {
+    width: 100%;
+
+}
+
+#number {
+  position: absolute;
+    right: 0;
+    bottom: 12px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  #circle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  #description {
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  html {
+    font-size: 12px;
+  }
+  
+  .line {
+    margin: 10px 0;
+  }
+  
+  #number {
+    bottom: 4px;
+  }
+}
