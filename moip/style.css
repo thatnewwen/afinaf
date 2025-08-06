@@ -1,0 +1,157 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 11px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 0rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-family: "Atkinson Hyperlegible Mono", sans-serif;
+    color: #20b694;
+  text-align: justify;
+  display: flex;
+}
+
+#sidebar {
+  width: 300px;
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+  border-right: 1px solid black;
+}
+
+#content {
+  padding: 2rem;
+  flex: 5;
+  overflow: scroll;
+  height: 100vh;
+}
+
+#essay {
+  font-size: 16px;
+}
+
+#essay .headline {
+  font-size: 18px;
+}
+
+.logo{
+  width: 200px;
+  border-bottom: 1px dashed black;
+  padding: 2rem 0rem 2rem 2rem;
+}
+
+.logo2 {
+  width: 150px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+#yellow {
+    transition: height 1s ease;
+  width: 250px;
+  height: 500px;
+  background: #f9ec2b;
+  opacity: 30%;
+  position: absolute;
+  z-index: -5;
+  right: 100px;
+  bottom: 100px;
+}
+
+#preview {
+  padding: 2rem;
+}
+
+.section-title {
+  background: #f9ec2b;
+  display: inline-block;
+font-weight: bold;
+font-size: 14px;
+opacity: 1;
+    -webkit-animation: fadeInOut 2s;
+   animation: fadeInOut 2s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+@-webkit-keyframe fadeInOut {
+   0% {
+        opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+.block {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.gradient {
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 200px;
+  height: 20px;
+  background: #901D1D;
+background: linear-gradient(90deg,rgba(144, 29, 29, 1) 0%, rgba(104, 144, 29, 1) 33%, rgba(29, 54, 144, 1) 66%, rgba(144, 29, 29, 1) 100%);
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+
+  .logo {
+    border-bottom: none;
+  }
+
+  #sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid black;
+  }
+
+  #sidebar, #content {
+    height: auto;
+  }
+  
+  #yellow {
+    display: none;
+  }
+}
