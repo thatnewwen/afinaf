@@ -322,6 +322,7 @@ h2{
 .image {
   width: 100%;
   border-top: 5px solid;
+  padding-bottom: 10px;
 }
 
 .backtohome img{
