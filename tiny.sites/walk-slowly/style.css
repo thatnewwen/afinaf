@@ -1,0 +1,52 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  line-height: 1.5;
+  background: #E6E3D3;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.title{
+  color: #d16340; 
+  font-size: 30px;
+  transition: padding 1s ease-in;
+}
+
+.first {
+}
+
+.second {
+}
+
+.name {
+  position: absolute;
+  bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: auto;
+  color: #d16340; 
+  letter-spacing: 5px;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
